@@ -109,7 +109,7 @@ export default new Vuex.Store({
         /**
          * @param selectedBreed can either be in formats;
          * "husky" or "italian/bulldog" depending on if
-         * the dog has a subbreed hence the small drama below
+         * the dog has a subbreed hence the logic below
          */
         let breedString = selectedBreed.split("/");
         if (breedString.length > 1) {
