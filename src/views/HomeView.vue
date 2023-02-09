@@ -1,18 +1,33 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <LoaderComponent v-show="appLoading" />
+    <SearchComponent />
+    <ImageGrid />
+    <FloatingButton />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import FloatingButton from "@/components/FloatingButton.vue";
+import ImageGrid from "@/components/ImageGrid.vue";
+import LoaderComponent from "@/components/LoaderComponent.vue";
+import SearchComponent from "@/components/SearchComponent.vue";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "HomeView",
   components: {
-    HelloWorld,
+    LoaderComponent,
+    ImageGrid,
+    SearchComponent,
+    FloatingButton,
+  },
+  computed: {
+    ...mapGetters(["appLoading"]),
+  },
+  methods: {
+    ...mapActions(["modifyLoadingState"]),
   },
 };
 </script>

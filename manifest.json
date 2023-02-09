@@ -1,0 +1,11 @@
+{
+    "name": "DOG BREED",
+    "short_name": "DOGS",
+    "description": "Find even more adorable breeds of dogs",
+    "start_url": "/",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "background_color": "#000000",
+    "theme_color": "#afb5bd"
+  }
+  
